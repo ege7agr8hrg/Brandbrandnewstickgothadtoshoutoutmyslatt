@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,26 +11,30 @@
         font-family: "sanf-pro";
         background-color: black;
     }
+
     @font-face {
         font-family: "akbaal";
         src: url(./font/akbaal.ttf) format('trueType');
     }
+
     @font-face {
         font-family: "sakf-pro";
         src: url(../font/SF-Pro.ttf) format('trueType');
     }
+
     #backgroundimg {
-            position: fixed;
-            top: 0px;
-            transform: scale(1.01);
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 1;
-            filter: blur(5px) brightness(1);
+        position: fixed;
+        top: 0px;
+        transform: scale(1.01);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 1;
+        filter: blur(5px) brightness(1);
     }
+
     #nav {
         color: white;
         position: fixed;
@@ -42,8 +47,9 @@
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(6px);
         transition: all 0.5s ease;
-         border: 1.5px solid rgba(255, 255, 255, 0.25);
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
     }
+
     #sign-up {
         position: relative;
         top: 150px;
@@ -61,6 +67,7 @@
         z-index: 1;
         font-family: sakf-pro;
     }
+
     #sign-up input {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 25px;
@@ -77,38 +84,43 @@
 
     }
 </style>
+
 <body>
     <img id="backgroundimg" src="../pic/neflexmusix.jpg" alt="">
     <div id="nav">
-    <h1 style="font-family: akbaal; position: relative; left: 10px; font-size: 20px;">)))</h1>
-    <h1 style="position: relative; left: 1360px; top: -15px;">🔎</h1>
+        <h1 style="font-family: akbaal; position: relative; left: 10px; font-size: 20px;">)))</h1>
+        <h1 style="position: relative; left: 1360px; top: -15px;">🔎</h1>
 
     </div>
     <div id="log-in" style="z-index: 1;">
         <form id="login">
-        <h1>Login</h1>
-        <h4>Username</h3>
-        <input type="text" name="username" placeholder="Username" required>
-        <h4>Password</h4>
-        <input type="password" name="password" placeholder="Password" required style="position: relative; left: 0px;">
-        <a style="position: absolute; left: 10px; top: 400px;">Don't have an account?</a>
-        <button onclick="submitlogin" type="submit" style="position: relative; top: 50px; left: 0px; width: 200px; height: 50px; border-radius: 35px; background-color: black; color: white; font-size: 20px;">Sign Up</button>
+            <h1>Login</h1>
+            <h4>Username</h3>
+                <input type="text" name="username" placeholder="Username" required>
+                <h4>Password</h4>
+                <input type="password" name="password" placeholder="Password" required
+                    style="position: relative; left: 0px;">
+                <a style="position: absolute; left: 10px; top: 400px;">Don't have an account?</a>
+                <button onclick="submitlogin" type="submit"
+                    style="position: relative; top: 50px; left: 0px; width: 200px; height: 50px; border-radius: 35px; background-color: black; color: white; font-size: 20px;">Sign
+                    Up</button>
         </form>
         <div id="loginResult"></div>
     </div>
     <script>
-        document.getElementById('login').onsubmit = function(event) {
+        document.getElementById('login').onsubmit = function (event) {
             event.preventDefault();
             const username = event.target.username.value;
             const password = event.target.password.value;
             const stored = JSON.parse(localStorage.getItem('cinemaUser'));
             if (stored && username === stored.username && password === stored.password) {
                 document.getElementById('loginResult').textContent = 'Login successful';
-                
-        } else {
-            document.getElementById('loginResult').textContent = 'Invalid username or password';
-        };
-    }
+
+            } else {
+                document.getElementById('loginResult').textContent = 'Invalid username or password';
+            };
+        }
     </script>
 </body>
+
 </html>
