@@ -100,7 +100,7 @@
                 <h4>Password</h4>
                 <input type="password" name="password" placeholder="Password" required
                     style="position: relative; left: 0px;">
-                <a style="position: absolute; left: 10px; top: 400px;">Don't have an account?</a>
+                <a href="cinemasignup.html" style="position: absolute; left: 10px; top: 400px;">Don't have an account?</a>
                 <button onclick="submitlogin" type="submit"
                     style="position: relative; top: 50px; left: 0px; width: 200px; height: 50px; border-radius: 35px; background-color: black; color: white; font-size: 20px;">Sign
                     Up</button>
@@ -115,7 +115,9 @@
             const stored = JSON.parse(localStorage.getItem('cinemaUser'));
             if (stored && username === stored.username && password === stored.password) {
                 document.getElementById('loginResult').textContent = 'Login successful';
-
+                setTimeout(function(){
+                    window.location.href = 'l678U.html'; 
+                }, 1000);
             } else {
                 document.getElementById('loginResult').textContent = 'Invalid username or password';
             };
