@@ -5,86 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
-    body {
-      font-family: "sanf-pro";
-      background-color: black;
-    }
-    @font-face {
-      font-family: "akbaal";
-      src: url(../font/akbaal.ttf) format("trueType");
-    }
-    @font-face {
-      font-family: "sakf-pro";
-      src: url(../font/SF-Pro.ttf) format("trueType");
-    }
-    #backgroundimg {
-      position: fixed;
-      top: 0px;
-      transform: scale(1.01);
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 1;
-      filter: blur(2px) brightness(1);
-    }
-    #nav {
-        color: white;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        z-index: 10;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(6px);
-        transition: all 0.5s ease;
-         border: 1.5px solid rgba(255, 255, 255, 0.25);
-    }
-    #container-movie {
-        position: relative;
-        top: 100px;
-        left: 20px;
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        z-index: 1;
-        font-family: sakf-pro;
-        color: white;
-    }
-    #blade-runner {
-        width: 250px;
-        border-radius: 15px;
-        text-align: center;
-        -webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(5px);
-        transition: all 0.5s ease;
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-        position: relative;
-        left: -125px;
-        transition:
-        transform 0.4s cubic-bezier(.4,0,.2,1),
-        box-shadow 0.4s cubic-bezier(.4,0,.2,1),
-        background 0.4s cubic-bezier(.4,0,.2,1),
-        -webkit-backdrop-filter 0.4s cubic-bezier(.4,0,.2,1),
-        backdrop-filter 0.4s cubic-bezier(.4,0,.2,1);       
-    }
-    #blade-runner:hover {
-        transform: scale(1.07);
-        box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.25);
-        background: rgba(255,255,255,0.18);
-        -webkit-backdrop-filter: blur(7px);
-        backdrop-filter: blur(11px);
-        border: 1.5px solid rgba(255, 255, 255, 0.25);
-        cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="gle.css">
   <body>
-    <img id="backgroundimg" src="../pic/neflexmusix.jpg" alt="" />
+    <img id="backgroundimg" src="../pic/Ảnh màn hình 2025-08-20 lúc 22.27.46.png" alt="" />
     <div id="nav">
       <div id="logo" style="display: flex; position: relative; top: -7px;">
       <h1
@@ -100,20 +23,21 @@
         S
       </h1>
       <h1 style="color: #C6A664;">O</h1>
-      <h1 style="font-family: sakf-pro; font-size: 20px; color: #C6A664;">S</h1>
+      <h1 style="font-family: sakf-pro; font-size: 20px; color: #C6A664;">X</h1>
       
       </div>
-      <button style="position: relative; left: 1360px; top: 0px; font-size: 40px; background: transparent; border: none;">🔎</button>
+      <div id="searchshit">
+        <input type="text" id="searchimput" placeholder="Search">
+      <button  onclick="seachgle" style="position: relative; left: 50px; top: -10px; font-size: 40px; background: transparent; border: none;">🔎</button>
+      </div>
     </div>
     <div id="container-movie">
-        <h2 style="top: -70px;position: relative;">Sum Film</h2>
+        <!-- <h2 style="top: -70px;position: relative;">Sum Film</h2>
         <div id="blade-runner">
-            <img src="../pic/blade-runner.jpg" alt="blade runner 2049" style="width: 200px; position: relative; top: 10px; border-radius: 10px;">
-            <h4>Blade Runner 2049</h4>
-            <p id="info">2017 Sci-fi/Neo-noir</p>
-            <p id="runtime">2h 44m</p>
+            <img src="../pic/blade-runner.jpg" alt="blade runner 2049" style="width: 200px; position: relative; top: 10px; border-radius: 10px;"> -->
         </div>
         
     </div>
+    <script src="dih.js"></script>
   </body>
 </html>
